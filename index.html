@@ -1,40 +1,49 @@
 <!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QA Performance Dashboard</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-header">
-      <h1>QA Dashboard</h1>
-      <span style="font-size: 0.8rem; color: #94a3b8">k6 Performance Reports</span>
-    </div>
-    <!-- Menu akan di-inject otomatis lewat JS -->
-    <nav class="sidebar-menu" id="nav-menu"></nav>
-  </aside>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QA Performance Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h1>QA Dashboard</h1>
+        <span style="font-size: 0.8rem; color: #94a3b8"
+          >k6 Performance Reports</span
+        >
+      </div>
+      <nav class="sidebar-menu" id="nav-menu"></nav>
+    </aside>
 
-  <!-- Overlay Mobile -->
-  <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <!-- Overlay Mobile -->
+    <div
+      class="sidebar-overlay"
+      id="sidebar-overlay"
+      onclick="toggleSidebar()"
+    ></div>
 
-  <!-- Main Content -->
-  <main class="main-content">
-    <div class="header">
-      <button class="toggle-btn" onclick="toggleSidebar()" aria-label="Toggle Sidebar">
-        ☰
-      </button>
-      <h2 id="report-title">Silakan Pilih Laporan</h2>
-    </div>
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="header">
+        <button
+          class="toggle-btn"
+          onclick="toggleSidebar()"
+          aria-label="Toggle Sidebar"
+        >
+          ☰
+        </button>
+        <h2 id="report-title">Silakan Pilih Laporan</h2>
+      </div>
 
-    <!-- Cards akan dirender di sini -->
-    <div class="card-list" id="card-container"></div>
-  </main>
+      <!-- Cards Render -->
+      <div class="card-list" id="card-container"></div>
+    </main>
 
-  <!-- Scripts -->
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
-</body>
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>

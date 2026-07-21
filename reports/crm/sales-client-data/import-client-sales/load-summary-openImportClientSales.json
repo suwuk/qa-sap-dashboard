@@ -1,0 +1,196 @@
+{
+    "metrics": {
+        "http_req_duration{expected_response:true}": {
+            "max": 25318.7701,
+            "p(90)": 9578.194479999998,
+            "p(95)": 12424.110539999996,
+            "avg": 4433.669700447133,
+            "min": 160.7458,
+            "med": 3226.1245
+        },
+        "http_req_connecting": {
+            "avg": 3.454766164705882,
+            "min": 0,
+            "med": 0,
+            "max": 10358.8275,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "checks": {
+            "passes": 8499,
+            "fails": 0,
+            "value": 1
+        },
+        "data_sent": {
+            "count": 6074938,
+            "rate": 7213.943216600768
+        },
+        "data_received": {
+            "rate": 1058211.8933160126,
+            "count": 891131445
+        },
+        "iteration_duration": {
+            "p(95)": 39277.23016,
+            "avg": 19221.520510352948,
+            "min": 2324.4254,
+            "med": 16746.7526,
+            "max": 50498.7492,
+            "p(90)": 35010.4018
+        },
+        "http_req_duration": {
+            "avg": 4433.148092247081,
+            "min": 0,
+            "med": 3225.37675,
+            "max": 25318.7701,
+            "p(90)": 9577.525890000003,
+            "p(95)": 12423.624019999994
+        },
+        "http_req_tls_handshaking": {
+            "avg": 2.822818070588237,
+            "min": 0,
+            "med": 0,
+            "max": 7057.0608,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "http_reqs": {
+            "rate": 10.09368611516801,
+            "count": 8500
+        },
+        "http_req_blocked": {
+            "max": 11496.4515,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 6.825311835294116,
+            "min": 0,
+            "med": 0
+        },
+        "http_req_waiting": {
+            "min": 0,
+            "med": 3074.84025,
+            "max": 25318.4338,
+            "p(90)": 9269.552920000006,
+            "p(95)": 12321.299914999985,
+            "avg": 4298.896655058838
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 100
+        },
+        "http_req_failed": {
+            "passes": 1,
+            "fails": 8499,
+            "value": 0.00011764705882352942
+        },
+        "http_req_receiving": {
+            "med": 16.6621,
+            "max": 13493.6377,
+            "p(90)": 237.86586000000037,
+            "p(95)": 504.7525799999995,
+            "avg": 125.01904931764666,
+            "min": 0
+        },
+        "vus_max": {
+            "min": 100,
+            "max": 100,
+            "value": 100
+        },
+        "iterations": {
+            "count": 2125,
+            "rate": 2.5234215287920025
+        },
+        "http_req_sending": {
+            "avg": 9.232387870588235,
+            "min": 0,
+            "med": 0,
+            "max": 5357.5283,
+            "p(90)": 3.00586,
+            "p(95)": 11.098144999999992
+        },
+        "group_duration": {
+            "avg": 5744.126036890646,
+            "min": 161.3077,
+            "med": 3979.34465,
+            "max": 32279.8109,
+            "p(90)": 13309.86305,
+            "p(95)": 17520.4281
+        }
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "Login": {
+                "checks": {},
+                "name": "Login",
+                "path": "::Login",
+                "id": "3be6f351497d03a0d837b765965c8d50",
+                "groups": {
+                        "Open Login Page": {
+                            "name": "Open Login Page",
+                            "path": "::Login::Open Login Page",
+                            "id": "413f384ebf51c900d32d97d380eebf7f",
+                            "groups": {},
+                            "checks": {
+                                    "CSRF token found": {
+                                        "name": "CSRF token found",
+                                        "path": "::Login::Open Login Page::CSRF token found",
+                                        "id": "aa64dc8340343319c85b53a82416102a",
+                                        "passes": 2125,
+                                        "fails": 0
+                                    }
+                                }
+                        },
+                        "Submit Login": {
+                            "checks": {
+                                "Login Success (Redirect to Dashboard)": {
+                                    "id": "70a7c8e26ceadda9499973a382e2c043",
+                                    "passes": 2125,
+                                    "fails": 0,
+                                    "name": "Login Success (Redirect to Dashboard)",
+                                    "path": "::Login::Submit Login::Login Success (Redirect to Dashboard)"
+                                }
+                            },
+                            "name": "Submit Login",
+                            "path": "::Login::Submit Login",
+                            "id": "f37a9d549f8c27c067a81b5e22934463",
+                            "groups": {}
+                        }
+                    }
+            },
+            "Dashboard": {
+                "checks": {
+                    "Dashboard - Status 200": {
+                        "name": "Dashboard - Status 200",
+                        "path": "::Dashboard::Dashboard - Status 200",
+                        "id": "68cdb58f5d2f1f0ddf88988b73e5cc80",
+                        "passes": 2125,
+                        "fails": 0
+                    }
+                },
+                "name": "Dashboard",
+                "path": "::Dashboard",
+                "id": "63ed997df0952d3513ef756dac138890",
+                "groups": {}
+            },
+            "Open Import Client Sales": {
+                "path": "::Open Import Client Sales",
+                "id": "ee0a5be08b3e069a6ca5f8cb6db77130",
+                "groups": {},
+                "checks": {
+                        "Open Import Client Sales - Status 200": {
+                            "name": "Open Import Client Sales - Status 200",
+                            "path": "::Open Import Client Sales::Open Import Client Sales - Status 200",
+                            "id": "dc57c3310a1e59624943258d88ea0d0f",
+                            "passes": 2124,
+                            "fails": 0
+                        }
+                    },
+                "name": "Open Import Client Sales"
+            }
+        },
+        "checks": {}
+    }
+}

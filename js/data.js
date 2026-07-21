@@ -1,4 +1,3 @@
-// Struktur hirarki menu dan data laporan k6
 const menuData = [
   {
     title: "Dashboard",
@@ -124,6 +123,34 @@ const menuData = [
                 cards: [
                   { title: "Load Test", url: "reports/crm/sales-client-data/view-client-sales/load-test-openViewClientSales.html" },
                   { title: "Stress Test", url: "reports/crm/sales-client-data/view-client-sales/stress-test-openViewClientSales.html" }
+                ]
+              }
+            ]
+          },
+          {
+            title: "Export Client Data",
+            isDropdown: true,
+            children: [
+              {
+                label: "Open Test",
+                mainTitle: "Open Menu Export Client Sales",
+                cards: [
+                  { title: "Load Test", url: "reports/crm/sales-client-data/export-client-sales/load-test-openExportClientSales.html" },
+                  { title: "Stress Test", url: "reports/crm/sales-client-data/export-client-sales/stress-test-openExportClientSales.html" }
+                ]
+              }
+            ]
+          },
+          {
+            title: "Import Client Data",
+            isDropdown: true,
+            children: [
+              {
+                label: "Open Test",
+                mainTitle: "Open Menu Import Client Sales",
+                cards: [
+                  { title: "Load Test", url: "reports/crm/sales-client-data/import-client-sales/load-test-openImportClientSales.html" },
+                  { title: "Stress Test", url: "reports/crm/sales-client-data/import-client-sales/stress-test-openImportClientSales.html" }
                 ]
               }
             ]

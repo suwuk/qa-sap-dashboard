@@ -1,0 +1,202 @@
+{
+    "metrics": {
+        "vus": {
+            "value": 6,
+            "min": 0,
+            "max": 700
+        },
+        "http_req_sending": {
+            "max": 664.288,
+            "p(90)": 1.02436,
+            "p(95)": 1.9383999999999995,
+            "avg": 1.1568445911630285,
+            "min": 0,
+            "med": 0
+        },
+        "iteration_duration": {
+            "min": 2141.3523,
+            "med": 73022.0902,
+            "max": 201399.1296,
+            "p(90)": 176215.88116,
+            "p(95)": 181784.88086,
+            "avg": 80098.14013833758
+        },
+        "http_req_connecting": {
+            "min": 0,
+            "med": 0,
+            "max": 6381.7818,
+            "p(90)": 0,
+            "p(95)": 11.719759999999969,
+            "avg": 28.11501603859827
+        },
+        "data_received": {
+            "count": 971795184,
+            "rate": 1305438.454024923
+        },
+        "http_req_blocked": {
+            "med": 0,
+            "max": 22980.9046,
+            "p(90)": 0,
+            "p(95)": 34.96287999999978,
+            "avg": 72.25370911122397,
+            "min": 0
+        },
+        "http_req_receiving": {
+            "p(95)": 1541.0535399999935,
+            "avg": 329.94431613001643,
+            "min": 0,
+            "med": 2.4888,
+            "max": 21045.089,
+            "p(90)": 486.9742200000004
+        },
+        "vus_max": {
+            "value": 700,
+            "min": 700,
+            "max": 700
+        },
+        "http_req_tls_handshaking": {
+            "p(95)": 19.655399999999858,
+            "avg": 44.045941554088365,
+            "min": 0,
+            "med": 0,
+            "max": 18150.81,
+            "p(90)": 0
+        },
+        "iterations": {
+            "count": 2298,
+            "rate": 3.086964842737143
+        },
+        "http_req_duration": {
+            "avg": 22213.636209832315,
+            "min": 131.073,
+            "med": 17810.6385,
+            "max": 60491.9253,
+            "p(90)": 48698.60446000001,
+            "p(95)": 52587.15939999999,
+            "thresholds": {
+                "p(95)<3000": true
+            }
+        },
+        "data_sent": {
+            "count": 8814901,
+            "rate": 11841.292201570272
+        },
+        "http_req_failed": {
+            "passes": 130,
+            "fails": 9715,
+            "thresholds": {
+                "rate<0.01": true
+            },
+            "value": 0.013204672422549517
+        },
+        "http_req_waiting": {
+            "max": 60491.4036,
+            "p(90)": 47431.821260000004,
+            "p(95)": 51220.32022,
+            "avg": 21882.535049111273,
+            "min": 131.073,
+            "med": 17731.7941
+        },
+        "checks": {
+            "passes": 9715,
+            "fails": 129,
+            "value": 0.9868955709061357
+        },
+        "group_duration": {
+            "avg": 27126.307987044973,
+            "min": 131.5862,
+            "med": 20842.8803,
+            "max": 110779.2423,
+            "p(90)": 54218.748780000016,
+            "p(95)": 81143.66021999995
+        },
+        "http_reqs": {
+            "count": 9845,
+            "rate": 13.225051730525315
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(90)": 47733.03684,
+            "p(95)": 51344.87442,
+            "avg": 21710.1606031291,
+            "min": 131.073,
+            "med": 17568.8003,
+            "max": 59986.4294
+        }
+    },
+    "root_group": {
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "Login": {
+                "name": "Login",
+                "path": "::Login",
+                "id": "3be6f351497d03a0d837b765965c8d50",
+                "groups": {
+                    "Open Login Page": {
+                        "path": "::Login::Open Login Page",
+                        "id": "413f384ebf51c900d32d97d380eebf7f",
+                        "groups": {},
+                        "checks": {
+                                "CSRF token found": {
+                                    "name": "CSRF token found",
+                                    "path": "::Login::Open Login Page::CSRF token found",
+                                    "id": "aa64dc8340343319c85b53a82416102a",
+                                    "passes": 2758,
+                                    "fails": 0
+                                }
+                            },
+                        "name": "Open Login Page"
+                    },
+                    "Submit Login": {
+                        "path": "::Login::Submit Login",
+                        "id": "f37a9d549f8c27c067a81b5e22934463",
+                        "groups": {},
+                        "checks": {
+                                "Login Success": {
+                                    "name": "Login Success",
+                                    "path": "::Login::Submit Login::Login Success",
+                                    "id": "e0767f8d2915e5a065c216a2847ac90d",
+                                    "passes": 2436,
+                                    "fails": 107
+                                }
+                            },
+                        "name": "Submit Login"
+                    }
+                },
+                "checks": {}
+            },
+            "Dashboard": {
+                "name": "Dashboard",
+                "path": "::Dashboard",
+                "id": "63ed997df0952d3513ef756dac138890",
+                "groups": {},
+                "checks": {
+                        "Dashboard": {
+                            "name": "Dashboard",
+                            "path": "::Dashboard::Dashboard",
+                            "id": "6bc7ddfdde4569e3417a20afbae73ea9",
+                            "passes": 2316,
+                            "fails": 22
+                        }
+                    }
+            },
+            "CRM > Sales Client Data > Change Client Sales": {
+                "name": "CRM > Sales Client Data > Change Client Sales",
+                "path": "::CRM > Sales Client Data > Change Client Sales",
+                "id": "92615a6b26b4ff4d3e26565caf210f08",
+                "groups": {},
+                "checks": {
+                        "Change Client Sales": {
+                            "path": "::CRM > Sales Client Data > Change Client Sales::Change Client Sales",
+                            "id": "1460abe57fca91717edb524f47201dfa",
+                            "passes": 2205,
+                            "fails": 0,
+                            "name": "Change Client Sales"
+                        }
+                    }
+            }
+        },
+        "checks": {},
+        "name": "",
+        "path": ""
+    }
+}

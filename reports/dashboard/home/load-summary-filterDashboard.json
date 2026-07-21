@@ -1,0 +1,154 @@
+{
+    "metrics": {
+        "data_sent": {
+            "count": 3962,
+            "rate": 3134.675452302732
+        },
+        "data_received": {
+            "count": 199942,
+            "rate": 158191.13560936722
+        },
+        "http_req_blocked": {
+            "max": 72.1135,
+            "p(90)": 64.90215,
+            "p(95)": 68.507825,
+            "avg": 36.05675,
+            "min": 0,
+            "med": 36.05675
+        },
+        "http_req_sending": {
+            "p(95)": 2.538675,
+            "avg": 1.58895,
+            "min": 0.5337,
+            "med": 1.58895,
+            "max": 2.6442,
+            "p(90)": 2.43315
+        },
+        "http_req_duration": {
+            "med": 309.6126,
+            "max": 459.2442,
+            "p(90)": 429.31788,
+            "p(95)": 444.28103999999996,
+            "avg": 309.6126,
+            "min": 159.981
+        },
+        "http_req_receiving": {
+            "p(95)": 1.8786549999999997,
+            "avg": 1.23475,
+            "min": 0.5193,
+            "med": 1.23475,
+            "max": 1.9502,
+            "p(90)": 1.8071099999999998
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 1
+        },
+        "http_req_duration{expected_response:true}": {
+            "avg": 309.6126,
+            "min": 159.981,
+            "med": 309.6126,
+            "max": 459.2442,
+            "p(90)": 429.31788,
+            "p(95)": 444.28103999999996
+        },
+        "http_reqs": {
+            "count": 2,
+            "rate": 1.5823702434642768
+        },
+        "checks": {
+            "passes": 2,
+            "fails": 0,
+            "value": 1
+        },
+        "http_req_connecting": {
+            "max": 0.8265,
+            "p(90)": 0.74385,
+            "p(95)": 0.785175,
+            "avg": 0.41325,
+            "min": 0,
+            "med": 0.41325
+        },
+        "http_req_waiting": {
+            "p(95)": 439.86371,
+            "avg": 306.7889,
+            "min": 158.928,
+            "med": 306.7889,
+            "max": 454.6498,
+            "p(90)": 425.07762
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 2,
+            "value": 0
+        },
+        "http_req_tls_handshaking": {
+            "avg": 25.3445,
+            "min": 0,
+            "med": 25.3445,
+            "max": 50.689,
+            "p(90)": 45.6201,
+            "p(95)": 48.15455
+        },
+        "vus_max": {
+            "value": 1,
+            "min": 1,
+            "max": 1
+        },
+        "group_duration": {
+            "avg": 473.9496,
+            "min": 237.7025,
+            "med": 473.2219,
+            "max": 710.9244,
+            "p(90)": 663.3839,
+            "p(95)": 687.15415
+        }
+    },
+    "root_group": {
+        "groups": {
+            "Login": {
+                "name": "Login",
+                "path": "::Login",
+                "id": "3be6f351497d03a0d837b765965c8d50",
+                "groups": {
+                    "Open Login Page": {
+                        "path": "::Login::Open Login Page",
+                        "id": "413f384ebf51c900d32d97d380eebf7f",
+                        "groups": {},
+                        "checks": {
+                                "CSRF token found": {
+                                    "path": "::Login::Open Login Page::CSRF token found",
+                                    "id": "aa64dc8340343319c85b53a82416102a",
+                                    "passes": 1,
+                                    "fails": 0,
+                                    "name": "CSRF token found"
+                                }
+                            },
+                        "name": "Open Login Page"
+                    },
+                    "Submit Login": {
+                        "path": "::Login::Submit Login",
+                        "id": "f37a9d549f8c27c067a81b5e22934463",
+                        "groups": {},
+                        "checks": {
+                                "Login Success (Redirect to Dashboard)": {
+                                    "fails": 0,
+                                    "name": "Login Success (Redirect to Dashboard)",
+                                    "path": "::Login::Submit Login::Login Success (Redirect to Dashboard)",
+                                    "id": "70a7c8e26ceadda9499973a382e2c043",
+                                    "passes": 1
+                                }
+                            },
+                        "name": "Submit Login"
+                    }
+                },
+                "checks": {}
+            }
+        },
+        "checks": {},
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e"
+    }
+}

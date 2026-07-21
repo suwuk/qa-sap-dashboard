@@ -1,0 +1,202 @@
+{
+    "metrics": {
+        "http_req_blocked": {
+            "avg": 10.612127081833464,
+            "min": 0,
+            "med": 0,
+            "max": 4511.2725,
+            "p(90)": 0,
+            "p(95)": 47.81630999999996
+        },
+        "http_req_failed": {
+            "fails": 7854,
+            "passes": 480,
+            "thresholds": {
+                "rate<0.01": true
+            },
+            "value": 0.05759539236861051
+        },
+        "iteration_duration": {
+            "avg": 88155.22265122058,
+            "min": 2604.1132,
+            "med": 82038.475,
+            "max": 210546.1166,
+            "p(90)": 161019.64695000008,
+            "p(95)": 195159.57200499994
+        },
+        "data_sent": {
+            "rate": 10397.739021678779,
+            "count": 7795420
+        },
+        "group_duration": {
+            "min": 174.0343,
+            "med": 26675.8778,
+            "max": 119738.7259,
+            "p(90)": 60004.93508,
+            "p(95)": 85649.24421999996,
+            "avg": 31834.773299734978
+        },
+        "vus": {
+            "value": 3,
+            "min": 0,
+            "max": 700
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(90)": 54011.8473,
+            "p(95)": 55932.197884999994,
+            "avg": 23692.123511726455,
+            "min": 172.9557,
+            "med": 19725.2358,
+            "max": 59995.2859
+        },
+        "http_req_waiting": {
+            "max": 60186.844,
+            "p(90)": 56043.27175,
+            "p(95)": 59991.37923,
+            "avg": 25661.831390748757,
+            "min": 165.4191,
+            "med": 21185.8208
+        },
+        "checks": {
+            "passes": 7854,
+            "fails": 475,
+            "value": 0.9429703445791812
+        },
+        "http_req_tls_handshaking": {
+            "avg": 5.212531473482122,
+            "min": 0,
+            "med": 0,
+            "max": 4474.1578,
+            "p(90)": 0,
+            "p(95)": 27.988734999999973
+        },
+        "http_req_duration": {
+            "p(95)": 59991.934005,
+            "avg": 25782.996981665452,
+            "min": 172.9557,
+            "med": 21282.411500000002,
+            "max": 60187.3524,
+            "p(90)": 56161.44811,
+            "thresholds": {
+                "p(95)<3000": true
+            }
+        },
+        "http_req_connecting": {
+            "p(95)": 18.179889999999997,
+            "avg": 5.345188720902329,
+            "min": 0,
+            "med": 0,
+            "max": 1117.8402,
+            "p(90)": 0
+        },
+        "vus_max": {
+            "value": 700,
+            "min": 402,
+            "max": 700
+        },
+        "iterations": {
+            "count": 2212,
+            "rate": 2.9504245718580213
+        },
+        "http_reqs": {
+            "count": 8334,
+            "rate": 11.116111384206487
+        },
+        "http_req_sending": {
+            "p(90)": 0.7413,
+            "p(95)": 1.4632699999999998,
+            "avg": 0.390101691864651,
+            "min": 0,
+            "med": 0,
+            "max": 41.8661
+        },
+        "data_received": {
+            "count": 752262142,
+            "rate": 1003387.300287228
+        },
+        "http_req_receiving": {
+            "avg": 120.77548922486201,
+            "min": 0,
+            "med": 1.01375,
+            "max": 4497.0287,
+            "p(90)": 321.00822999999997,
+            "p(95)": 506.0774349999998
+        }
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "Login": {
+                "path": "::Login",
+                "id": "3be6f351497d03a0d837b765965c8d50",
+                "groups": {
+                    "Open Login Page": {
+                        "name": "Open Login Page",
+                        "path": "::Login::Open Login Page",
+                        "id": "413f384ebf51c900d32d97d380eebf7f",
+                        "groups": {},
+                        "checks": {
+                                "CSRF token found": {
+                                    "name": "CSRF token found",
+                                    "path": "::Login::Open Login Page::CSRF token found",
+                                    "id": "aa64dc8340343319c85b53a82416102a",
+                                    "passes": 2595,
+                                    "fails": 0
+                                }
+                            }
+                    },
+                    "Submit Login": {
+                        "checks": {
+                            "Login Success": {
+                                "passes": 1760,
+                                "fails": 464,
+                                "name": "Login Success",
+                                "path": "::Login::Submit Login::Login Success",
+                                "id": "e0767f8d2915e5a065c216a2847ac90d"
+                            }
+                        },
+                        "name": "Submit Login",
+                        "path": "::Login::Submit Login",
+                        "id": "f37a9d549f8c27c067a81b5e22934463",
+                        "groups": {}
+                    }
+                },
+                "checks": {},
+                "name": "Login"
+            },
+            "Dashboard": {
+                "groups": {},
+                "checks": {
+                        "Dashboard": {
+                            "name": "Dashboard",
+                            "path": "::Dashboard::Dashboard",
+                            "id": "6bc7ddfdde4569e3417a20afbae73ea9",
+                            "passes": 1755,
+                            "fails": 5
+                        }
+                    },
+                "name": "Dashboard",
+                "path": "::Dashboard",
+                "id": "63ed997df0952d3513ef756dac138890"
+            },
+            "Dashboard Finance": {
+                "name": "Dashboard Finance",
+                "path": "::Dashboard Finance",
+                "id": "ce6dcd42cb3e4c0039931ebb7230fc5a",
+                "groups": {},
+                "checks": {
+                        "Dashboard Finance": {
+                            "passes": 1744,
+                            "fails": 6,
+                            "name": "Dashboard Finance",
+                            "path": "::Dashboard Finance::Dashboard Finance",
+                            "id": "2aa1407ae1f8fe3ff86959e561b84def"
+                        }
+                    }
+            }
+        },
+        "checks": {}
+    }
+}

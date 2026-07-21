@@ -1,0 +1,202 @@
+{
+    "metrics": {
+        "vus": {
+            "value": 3,
+            "min": 0,
+            "max": 700
+        },
+        "vus_max": {
+            "value": 700,
+            "min": 431,
+            "max": 700
+        },
+        "http_req_tls_handshaking": {
+            "avg": 4.3621880438848,
+            "min": 0,
+            "med": 0,
+            "max": 1279.4859,
+            "p(90)": 0,
+            "p(95)": 31.8206
+        },
+        "http_req_duration": {
+            "min": 0,
+            "med": 23770.1556,
+            "max": 60248.3253,
+            "p(90)": 54711.937,
+            "p(95)": 59984.0553,
+            "avg": 26927.13228035152,
+            "thresholds": {
+                "p(95)<3000": true
+            }
+        },
+        "checks": {
+            "passes": 7474,
+            "fails": 470,
+            "value": 0.9408358509566969
+        },
+        "http_req_blocked": {
+            "med": 0,
+            "max": 1383.3681,
+            "p(90)": 0,
+            "p(95)": 52.6017,
+            "avg": 9.043138536342097,
+            "min": 0
+        },
+        "data_received": {
+            "count": 719946910,
+            "rate": 960155.9103684573
+        },
+        "iteration_duration": {
+            "avg": 92015.18847806129,
+            "min": 2502.7536,
+            "med": 94613.6751,
+            "max": 206876.8499,
+            "p(90)": 168053.79550000004,
+            "p(95)": 193529.88739000002
+        },
+        "http_req_duration{expected_response:true}": {
+            "max": 59951.3149,
+            "p(90)": 49597.803199999995,
+            "p(95)": 53204.613629999985,
+            "avg": 24612.339631254945,
+            "min": 176.3649,
+            "med": 22318.776899999997
+        },
+        "group_duration": {
+            "med": 28197.6344,
+            "max": 119854.1362,
+            "p(90)": 60003.87392,
+            "p(95)": 85008.00096000002,
+            "avg": 33088.47336500142,
+            "min": 177.8132
+        },
+        "http_req_connecting": {
+            "avg": 4.626508315671365,
+            "min": 0,
+            "med": 0,
+            "max": 1147.7998,
+            "p(90)": 0,
+            "p(95)": 18.2827
+        },
+        "http_req_waiting": {
+            "med": 23680.9221,
+            "max": 60248.3253,
+            "p(90)": 54508.1387,
+            "p(95)": 59983.653,
+            "avg": 26844.321048921596,
+            "min": 0
+        },
+        "iterations": {
+            "count": 2115,
+            "rate": 2.820665971646836
+        },
+        "http_req_receiving": {
+            "p(95)": 361.237,
+            "avg": 82.41296092756515,
+            "min": 0,
+            "med": 0.7515,
+            "max": 3179.4645,
+            "p(90)": 266.6348
+        },
+        "data_sent": {
+            "count": 7476851,
+            "rate": 9971.488979089181
+        },
+        "http_req_sending": {
+            "p(95)": 1.5156,
+            "avg": 0.39827050243111867,
+            "min": 0,
+            "med": 0,
+            "max": 108.6026,
+            "p(90)": 0.7754
+        },
+        "http_req_failed": {
+            "passes": 547,
+            "fails": 7474,
+            "thresholds": {
+                "rate<0.01": true
+            },
+            "value": 0.06819598553796284
+        },
+        "http_reqs": {
+            "count": 8021,
+            "rate": 10.697192320841262
+        }
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "Login": {
+                "name": "Login",
+                "path": "::Login",
+                "id": "3be6f351497d03a0d837b765965c8d50",
+                "groups": {
+                    "Open Login Page": {
+                        "checks": {
+                            "CSRF token found": {
+                                "name": "CSRF token found",
+                                "path": "::Login::Open Login Page::CSRF token found",
+                                "id": "aa64dc8340343319c85b53a82416102a",
+                                "passes": 2418,
+                                "fails": 0
+                            }
+                        },
+                        "name": "Open Login Page",
+                        "path": "::Login::Open Login Page",
+                        "id": "413f384ebf51c900d32d97d380eebf7f",
+                        "groups": {}
+                    },
+                    "Submit Login": {
+                        "name": "Submit Login",
+                        "path": "::Login::Submit Login",
+                        "id": "f37a9d549f8c27c067a81b5e22934463",
+                        "groups": {},
+                        "checks": {
+                                "Login Success": {
+                                    "name": "Login Success",
+                                    "path": "::Login::Submit Login::Login Success",
+                                    "id": "e0767f8d2915e5a065c216a2847ac90d",
+                                    "passes": 1746,
+                                    "fails": 345
+                                }
+                            }
+                    }
+                },
+                "checks": {}
+            },
+            "Dashboard": {
+                "groups": {},
+                "checks": {
+                        "Dashboard": {
+                            "name": "Dashboard",
+                            "path": "::Dashboard::Dashboard",
+                            "id": "6bc7ddfdde4569e3417a20afbae73ea9",
+                            "passes": 1663,
+                            "fails": 77
+                        }
+                    },
+                "name": "Dashboard",
+                "path": "::Dashboard",
+                "id": "63ed997df0952d3513ef756dac138890"
+            },
+            "Dashboard NOC": {
+                "name": "Dashboard NOC",
+                "path": "::Dashboard NOC",
+                "id": "765f710d2bab1ad2b935d464017c70f3",
+                "groups": {},
+                "checks": {
+                        "Dashboard NOC": {
+                            "name": "Dashboard NOC",
+                            "path": "::Dashboard NOC::Dashboard NOC",
+                            "id": "4fca9b6db548a7d7face0e8608e717b5",
+                            "passes": 1647,
+                            "fails": 48
+                        }
+                    }
+            }
+        },
+        "checks": {}
+    }
+}
